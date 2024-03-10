@@ -1,25 +1,26 @@
 import { Title, Text, Anchor, Button, Center } from '@mantine/core';
-import classes from './Welcome.module.css';
+import classes from './QuestionInfo.module.css';
 import DimmedBox from '../DimmedBox/DimmedBox';
 
-export function Welcome() {
+const QuestionInfoPage = () => {
+  console.log('->', import.meta.env.VITE_API_BASE_URL);
   return (
     <>
       <Title className={classes.title} ta="center" mt={100}>
-        Welcome to{' '}
+        Question{' '}
         <Text inherit variant="gradient" component="span" gradient={{ from: 'teal', to: 'aqua' }}>
-          CLASSTING
+          Info
         </Text>
       </Title>
       <DimmedBox>
         <Text ta="center" size="lg" maw={580} mx="auto">
-          해당 프로젝트는 CLASSTING과제를 목적으로 제작되었으며 React 18, Vitest, Module.css,
-          Mantine UI, Tanstack Query, Typescript, StoryBook, 등으로 구성되었습니다. 프로젝트에 대한
-          설명은{' '}
-          <Anchor href="https://github.com/kich555/classting/blob/master/README.md" size="lg">
-            README
-          </Anchor>{' '}
-          를 참고해주세요
+          문제는 4지선다 입니다.
+          <br />
+          답안을 선택해야 다음 문제로 넘어갈 수 있습니다.
+          <br />
+          답안을 선택할 시 해당 답이 맞았는지 틀렸는지 바로 알 수 있습니다.
+          <br />
+          답안을 선택한 후 다음 문항 버튼을 클릭하여 다음 문항으로 이동해주세요
         </Text>
       </DimmedBox>
       <Center my="xl">
@@ -33,6 +34,9 @@ export function Welcome() {
           퀴즈 시작하기
         </Button>
       </Center>
+      <></>
     </>
   );
-}
+};
+
+export default QuestionInfoPage;

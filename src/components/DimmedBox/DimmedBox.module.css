@@ -1,0 +1,4 @@
+.dimmedBox {
+  border-radius: rem(16px);
+  opacity: 0.8;
+}
